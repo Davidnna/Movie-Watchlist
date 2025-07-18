@@ -1,0 +1,174 @@
+html, body {
+    height: 100%;
+    min-height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 550px;
+    margin: 0 auto;
+    font-family: "Inter", sans-serif;
+    background-color: #DFDDDD;
+}
+
+header {
+    background-color: #444;
+    background-blend-mode: multiply;
+    background-image: url(../images/watchlist.png);
+    /* background-image: url(https://i.postimg.cc/J7SBxSgR/watchlist.png); */
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4em 2em;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: smaller;
+    outline: none;
+}
+
+header a:hover, header a:focus {
+    text-decoration: underline;
+}
+
+header a:active {
+    color: #cccccccc;
+}
+
+main {
+    padding: 0 2em;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: white;
+}
+
+form {
+    display: flex;
+    transform: translateY(-50%);
+    align-items: center;
+    border: 1px solid #D1D5DB;
+    background: white;
+    border-radius: 5px;
+}
+
+form:focus-within {
+    border-color: #374151;
+}
+
+.search {
+    width: 15px;
+    height: 15px;
+    padding: 0.5em;
+}
+
+input {
+    background: none;
+    border: none;
+    color: #6B7280;
+    outline: none;
+    flex: 1;
+}
+
+form button {
+    cursor: pointer;
+    color: #374151;
+    background: #F9FAFB;
+    border: none;
+    border-left: 1px solid #D1D5DB;
+    padding: 0.5em 1em;
+    border-radius: 0 5px 5px 0;
+}
+
+form button:hover, form button:focus {
+    background: #E5E7EB;
+}
+
+form button:active {
+    background: #D1D5DB;
+}
+
+.movies {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.none {
+    margin: auto;
+    text-align: center;
+    color: #DFDDDD;
+}
+
+.none a {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin: auto;
+    width: fit-content;
+    font-size: smaller;
+}
+
+.movie-item {
+    display: flex;
+    align-items: center;
+    padding: 1em 0;
+    border-bottom: 1.5px solid #E5E7EB;
+    color: #111827;
+    font-size: smaller;
+}
+
+.movie-poster {
+    width: 20%;
+    margin-right: 1em;
+}
+
+.movie-item h3 {
+    font-weight: 500;
+    color: black;
+    font-size: large;
+}
+
+.movie-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.movie-title img {
+    width: 15px;
+    height: 15px;
+}
+
+.movie-title button {
+    background: none;
+    border: none;
+    color: #111827;
+    cursor: pointer;
+    display: flex;
+    gap: 0.5em;
+    outline: none;
+}
+
+.movie-title button:hover, .movie-title button:focus {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.movie-title button:active {
+    color: #374151;
+}
+
+.movie-plot {
+    color: #6B7280;
+}
