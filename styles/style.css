@@ -119,6 +119,10 @@ form button:active {
     font-size: smaller;
 }
 
+.none b {
+    color: #444;
+}
+
 .movie-item {
     display: flex;
     align-items: center;

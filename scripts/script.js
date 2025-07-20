@@ -45,16 +45,15 @@ if (form) {
         fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=${movie.value}`)
             .then(response => response.json())
             .then(data => {
-                if (data.Search) {
-                    const movieIds = data.Search.map(movie => movie.imdbID);
-                    renderMovies(movieIds);
-                } else if (data.Error) {
+                const movieIds = data.Search.map(movie => movie.imdbID);
+                renderMovies(movieIds);
+            })
+            .catch(() => {
                     movies.innerHTML = `
                         <h3 class="none">Unable to find what you are looking for:<br>
-                        "${movie.value}".</br>
+                        <b>"${movie.value}"</b>.</br>
                         Please try another search.</h3>
                     `;
-                }
             });
     });
 }
